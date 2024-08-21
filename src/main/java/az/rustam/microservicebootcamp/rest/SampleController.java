@@ -1,5 +1,6 @@
 package az.rustam.microservicebootcamp.rest;
 
+import az.rustam.microservicebootcamp.model.Car;
 import az.rustam.microservicebootcamp.model.Student;
 import az.rustam.microservicebootcamp.service.TestService;
 import lombok.RequiredArgsConstructor;
@@ -37,6 +38,8 @@ public class SampleController {
     @Value("#{new Integer('${course.count}')}")
     private Integer count;
 
+    private final Car car;
+
 
     @GetMapping(path = "/{id}")
     public String test(@PathVariable Long id){
@@ -44,6 +47,9 @@ public class SampleController {
         log.info("application-yaml-name {} ",name);
         log.info("course students {}",students);
         log.info("count {}",count);
+        log.info("car id {}",car.getId());
+        log.info("car names {}",car.getNames());
+        log.info("car model {}",car.getModel());
         return "Hello";
     }
 }

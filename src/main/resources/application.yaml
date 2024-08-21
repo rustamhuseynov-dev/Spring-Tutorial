@@ -1,8 +1,6 @@
-rustam:
-  bootcamp:
-    name: rustam
-
-
-course:
-  students: Tural,Elnur
-  count: 12
+spring:
+  profiles:
+    active: dev
+    include:
+      - common
+      - server  #burda bizim hem common hemde server yaml filemiz ise dusur bu profiles adlanir

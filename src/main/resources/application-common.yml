@@ -1,0 +1,13 @@
+rustam:
+  bootcamp:
+    name: rustam
+
+
+course:
+  students: Tural,Elnur
+  count: 12
+
+application:
+  id: 1
+  names: Bugatti,Land Rover,Tesla
+  model: 1999
