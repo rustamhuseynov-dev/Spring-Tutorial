@@ -1,0 +1,8 @@
+rustam:
+  bootcamp:
+    name: rustam
+
+
+course:
+  students: Tural,Elnur
+  count: 12
