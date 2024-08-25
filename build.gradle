@@ -41,3 +41,8 @@ tasks.named('test') {
 task hello{
     println("hello")
 }
+
+jar {
+    archiveBaseName.set("ms-bootcamp")
+}
+

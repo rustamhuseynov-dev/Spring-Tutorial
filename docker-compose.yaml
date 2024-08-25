@@ -1,8 +1,23 @@
 services:
   postgres:
+    hostname: postgres-db
     image: postgres
     ports:
       - "5432:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: "012345"
+    networks:
+      - ms-bootcamp-network
+
+  backend:
+    hostname: ms-project
+    image: microservice-bootcamp:v2
+    ports:
+      - "9000:9090"
+    environment:
+      DATABASE_HOSTNAME: ${db_hostname}
+    networks:
+      - ms-bootcamp-network
+networks:
+  ms-bootcamp-network:
