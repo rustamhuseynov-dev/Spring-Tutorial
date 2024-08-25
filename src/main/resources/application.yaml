@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev
     include:
       - common
       - server  #burda bizim hem common hemde server yaml filemiz ise dusur bu profiles adlanir
+      - db
