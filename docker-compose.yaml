@@ -12,7 +12,9 @@ services:
 
   backend:
     hostname: ms-project
-    image: microservice-bootcamp:v2
+    build:
+      dockerfile: Dockerfile
+    image: hello:v5
     ports:
       - "9000:9090"
     environment:
